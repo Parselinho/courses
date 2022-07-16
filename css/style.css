@@ -1,0 +1,728 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.form-field {
+    background-color: rgb(236, 231, 231);
+    border-radius: 10px;
+}
+a { 
+    text-decoration: none;
+}
+.active {
+    padding: 10px;
+    background-color: #02e630;
+    border-radius: 100px;
+}
+.blabla {
+    position: relative;
+    margin-top: 10px;
+    right: 10px;
+    left: 28px;
+    bottom: 50px;
+    background-color:#02e630;
+    color:#fff;
+    border-radius: 30px;
+    width:10px;
+    height:10px;
+    display: flex;
+}
+.display {
+    display: none;
+}
+/* teamtreehouse instructions */
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "navigation"
+    "main";
+}
+.header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  width: 100%;
+  grid-area: header;
+  background-color: rgb(103, 103, 247);
+  color: white;;
+}
+.navigation {
+  grid-area: navigation;
+  display: grid;
+  justify-items: center;
+  background-color: rgb(77, 77, 110);
+  grid-template-columns: repeat(4, 1fr);
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.main {
+  display: grid;
+  grid-area: main;
+}
+/* dashboard and border near it */
+.main-header {
+    display: flex;
+    margin-bottom: 30px;
+}
+.tab {
+    border: 1px solid rgb(160, 158, 158);
+    background-color: rgb(238, 234, 234);
+    width: 100%;
+    padding-bottom: 50px;
+    margin-left: 20px;
+    border-right: 0;
+}
+.headline {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+/* alert */
+.alert {
+    background-color: rgb(91, 44, 199);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.alert-banner-close {
+    float: right;
+    margin-left: 30px;
+}
+/* hourly daily flex.. */ 
+.traffic-nav {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+.h3traffic {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+h3 {
+    margin-left: 15px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.traffic,
+.daily,
+.mobile  {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid lightgrey;
+}
+img {
+    border-radius: 100px;
+    width: 100px;
+}
+#mobile-chart {
+    margin-bottom: 20px;
+}
+.widget-container {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.widget-container-full, .widget-container-half {
+  width: 95vw;
+    }
+
+    /* calc */ 
+    .webapp1 {
+        width: calc(100% / 4);
+        font-size: 1em;
+        margin: 10px;
+        margin-top: 25px;
+        padding-left: 5px;
+    }
+    .webapp2 {
+        width: calc(100% / 4 * 2);
+        margin: 1em 0 .5em 3em;
+        margin-bottom: 20px;
+        justify-self: center;
+        border-right: solid lightgrey 1px;  /* didnt finish border */
+    }
+    .bellicon {
+        margin-top: 10px;
+        padding-right: 15px;  /*bellicon dosent get bigger why*/
+    }
+    
+    .webapp3 {
+        width: calc(50% / 4 * 3);
+        border-radius: 100px;
+        justify-self: center;
+        margin-top: 15px;
+        max-height: 6vh;
+    }
+    .webapp4 {
+        width: calc(100% / 4 * 4);
+        margin-top: 30px;
+        text-align: center;
+        padding-right: 5px;
+    }
+
+    .members-container {
+        margin-top: 35px;
+        text-align: center;
+    }
+    .pm {
+        text-align: center;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .pm,
+    .pm1 {
+        margin-right: 20px;
+        margin-left: 20px;
+        /* padding-bottom: 20px; */
+    }
+    .pm {
+        border-bottom: 1px solid lightgrey;
+        margin-bottom: 20px;
+    }
+    .pm1 {
+        /* margin-bottom: 10px; */
+    }
+    input,
+    textarea {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+    textarea {
+        padding: 50px;
+    }
+    #send.button-primary {
+        width: 100%;
+        padding: 10px;
+    }
+    .activity, .members {
+        border-bottom: 1px solid lightgrey;
+        width: 100%;
+    }
+    .message {
+        width: 100%;
+    }
+    a img {
+        width: 100%;
+    }
+    .settings {
+        border-top: 1px solid lightgray;
+        margin-top: 25px;
+        width: 100%;
+    }
+
+
+    /* switch buttons */
+
+    /* styling lable */
+.switch {
+    --width: 80px;
+    --height: calc(var(--width) / 3);
+    position: relative;
+    display: inline-block;
+    width: var(--width);
+    height: var(--height);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: var(--height);
+    cursor: pointer;
+}
+.switch input {
+    display: none;
+}
+.switch .slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: var(--height);
+        background-color: #ccc;
+        transition: all 0.4s ease-in-out;
+    }
+.switch .slider::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(var(--height));
+        height: calc(var(--height));
+        border-radius: calc(var(--height) / 2);
+        background-color: #fff;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+        transition: all 0.4s ease-in-out;
+    }
+    .switch input:checked + .slider {
+        background-color: #2196F3;
+    }
+    .switch input:checked + .slider::before {
+        transform: translateX(calc(var(--width) - var(--height)));
+    }
+    /* adding text */ 
+    /* Adding text in the toggle button */
+.switch .labels {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    font-family: sans-serif;
+    transition: all 0.4s ease-in-out;
+}
+
+.switch .labels::after {
+    content: attr(data-off);
+    position: absolute;
+    right: 5px;
+    color: #4d4d4d;
+    opacity: 1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease-in-out;
+}
+
+.switch .labels::before {
+    content: attr(data-on);
+    position: absolute;
+    left: 5px;
+    color: #ffffff;
+    opacity: 0;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
+    transition: all 0.4s ease-in-out;
+}
+
+.switch input:checked~.labels::after {
+    opacity: 0;
+}
+
+.switch input:checked~.labels::before {
+    opacity: 1;
+}
+
+.swidget {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 15px 20px 30px;
+      }
+      /* hover */
+#svgbell {
+        transition: transform 1.5s;
+      }
+#svgbell:hover {
+        transform: rotate(1turn);
+      }
+
+      /* trimezone */
+#timezone {
+        width: 90%;
+        margin-left: 15px;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: rgb(235, 238, 241);
+    }
+
+.button-primary,
+.button-disabled {
+  color: white;
+  padding: 10px;
+}
+.settings-button {
+    display: flex;
+    align-content: space-between;
+    justify-content: space-evenly;
+    margin-right: 10px;
+    margin-left: 10px;
+    max-width: 90%;
+}
+.button-primary {
+  background-color: #234983;
+  border-radius: 10px;
+  border-color: #e7e7e7;
+}
+.button-disabled {
+  background-color: lightgrey;
+}
+#save.button-primary,
+#cancel.button-disabled {
+    width: 40%;
+    border-radius: 10px;
+    border-color: #e7e7e7;
+}
+#cancel.button-disabled {
+    background-color: rgb(110, 106, 106);
+}
+#messageField {
+    resize: vertical;
+    margin: auto;
+    width: 100%;
+    max-width: 100%;
+    background-color: rgb(236, 231, 231);
+    border: 1px solid lightgrey;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    height: 150px;
+}
+#userField {
+    border-radius: 10px;
+    border-color: lightgrey;
+    background-color: rgb(236, 231, 231);
+}
+
+/* svgs social media */
+.facebook-image,
+.instagram-image,
+.twitter-image {
+    border: .5px solid rgb(236, 231, 231);
+    background-color: #234983;
+    border-radius: 100px;
+    width: 15%;
+    padding: 10px;
+    padding-bottom: 5px;
+    margin-right: 25px;
+}
+.socialcont {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgrey;
+    padding: 10px;
+    background-color: rgb(236, 231, 231);
+}
+.socialp {
+  font-size: 1em;
+  color: #234983
+}
+.socialf {
+  font-size: 2em;
+  color: darkslategray;
+}
+canvas {
+    margin-top: 50px;
+    margin-left: 10px;
+}
+.social-container {
+    border-bottom: 1px solid lightgrey;
+}
+/* media query */
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 55px 1fr;
+        grid-template-areas: 
+        "header header"
+        "navigation main";
+    }
+    .members-text, .memberactivity {
+        margin-top: 7px;
+        grid-gap: 1px;
+    }
+    .display {
+        display: block;
+        text-align: right;
+        color: rgb(10, 168, 221);
+        margin-top: 20px;
+    }
+    .main {
+        grid-template-columns: 50%;
+    }
+    .traffic, .social {
+        grid-column: 1 / span 2;
+    }
+    .daily, .members, .message {
+        grid-column: 1 / span 1;
+    }
+    .mobile, .activity, .settings {
+        grid-column: 2 / span 1;
+    }
+    
+    .widget-container-full {
+        width: 90vw;
+    }
+    .widget-container-half {
+        width: 45vw;
+    }
+.header {
+    display: grid;
+    grid-template-columns: 6fr repeat(2, .5fr) 1fr;
+    max-height: 75px;
+    grid-gap: 1px;
+}
+.webapp2 {
+    min-height: 3vh;
+}
+img {
+    width: 80%;
+}
+.webapp3 {
+    width: 75%;
+    height: 45px;
+}
+/* .webapp3 {
+    width: 50%;
+} */
+.webapp4 {
+    margin-top: 28px;
+    padding-right: 10px;
+}
+.traffic-nav {
+    justify-content: flex-end;
+}
+#traffic-nav-link1, #traffic-nav-link2, #traffic-nav-link3, #traffic-nav-link4 {
+    padding: 10px;
+    margin-right: 5px;
+}
+.facebook-image,
+.twitter-image,
+.instagram-image {
+    padding: 15px;
+    padding-bottom: 11px;
+}
+.main {
+    display: grid;
+    grid-template-areas: 
+    "dashboard dashboard"
+    "alert alert"
+    "traffic traffic"
+    "daily mobile"
+    "social social"
+    "members members"
+    "activity activity"
+    "message message"
+    "settings settings";
+}
+.main-header {
+    grid-area: dashboard;
+}
+#alert {
+    grid-area: alert;
+}
+.traffic {
+    grid-area: traffic;
+}
+.daily {
+    grid-area: daily;
+}
+.mobile {
+    grid-area: mobile;
+}
+.social-container {
+    grid-area: social;
+}
+.members {
+    grid-area: members;
+}
+.activity {
+    grid-area: activity;
+}
+.message {
+    grid-area: message;
+}
+.settings {
+    grid-area: settings;
+}
+.navigation {
+    display: flex;
+    flex-direction: column;
+}
+nav a {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.date {
+    margin-top: 10px;
+}
+
+.member,
+.member2 {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 50px auto 1fr;
+    border-bottom: 1px solid lightgrey;
+}
+.member, .member2 {
+    min-height: 99px;
+    }
+    .profile-image {
+        margin-bottom: 5px;
+        margin-top: 7px;
+    }
+.pm {
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+.pm1 {
+    padding-bottom: 18px;
+}
+.newmembers {
+    text-align: left;
+}
+.members .pm, .members .pm1 {
+    text-align: right;
+}
+.memberactivity .pm,
+.memberactivity .pm1 {
+    text-align: left;
+    margin-left: 0;
+}
+
+.flexsocial {
+    display: grid;
+    grid-template-areas: 
+    "facebook instagram twitter";
+    grid-gap: 5px;
+}
+.socialcont {
+    padding: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.socialcont1 {
+    grid-area: facebook;
+}
+.socialcont2 {
+    grid-area: instagram;
+}
+.socialcont3 {
+    grid-area: twitter;
+}
+.facebook-image,
+.instagram-image,
+.twitter-image {
+    width: 30%;
+}
+.swidget {
+    width: 40%;
+}
+.daily, .mobile {
+    border: 1px solid lightgrey
+}
+#timezone {
+    width: 96%;
+    margin-left: 10px;
+}
+.settings-button {
+    max-width: 96%;
+    margin-right: 10px;
+}
+#save.button-primary {
+    margin-right: 20px;
+}
+#save.button-primary,
+#cancel.button-disabled {
+  width: 70%;
+
+}
+.settings-button {
+    margin-top: 15px;
+}
+}
+/* media 1024 */
+@media (min-width: 1024px) {
+    .header {
+        grid-template-columns: 6fr repeat(3, .5fr);
+    }
+    .main {
+        grid-template-areas: 
+        "dashboard dashboard"
+        "alert alert"
+        "traffic traffic"
+        "daily mobile"
+        "social social"
+        "members activity"
+        "message settings";
+    }
+
+    .swidget {
+        height: 34px;
+        
+    }
+    .webapp3 {
+        width: 40%;
+    }
+    /* .webapp3 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    } */
+    .webapp4 {
+        padding-bottom: 10px;
+        margin-top: 10px;
+        padding-top: 10px;
+        height: 45px;
+        width: 70px;
+    }
+    .memberactivity {
+        text-align: left;
+        margin-right: 20px;
+    }
+
+    /* .member2 {
+        padding-bottom: 12px;
+    } */
+
+    .activity, .members {
+        border-bottom: 0;
+    }
+
+    .settings {
+        border-top: 0;
+        margin-top: 0;
+    }
+
+    #traffic-chart {
+        margin-left: 35px;
+    }
+    .swidget {
+        width: 55%;
+    }
+
+    .activity, .settings  {
+        border-left: 1px solid lightgrey;
+    }
+    .facebook-image,
+.twitter-image,
+.instagram-image {
+    padding: 25px;
+    padding-bottom: 17px;
+}
+}
+
+/* autocomplete */
+.autocomplete {
+    position: relative;
+    /* display: inline-block; */
+}
+ .autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+    background-color: #e9e9e9;
+}
+.autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+} 
